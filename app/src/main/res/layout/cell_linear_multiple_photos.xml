@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/multiple_photos_avatar"
+            style="@style/avatar_image_view"
+            android:layout_marginStart="@dimen/padding_medium"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:src="@drawable/avatar1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/padding_medium"
+            android:orientation="vertical">
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/multiple_photos_name"
+                    style="@style/text_normal_blue_bold"
+                    android:text="Jan Kowalski" />
+
+                <TextView
+                    android:id="@+id/multiple_photos_with"
+                    style="@style/text_normal"
+                    android:layout_marginStart="@dimen/padding_medium"
+                    android:text="z:" />
+
+                <TextView
+                    android:id="@+id/multiple_photos_friend_name"
+                    style="@style/text_normal_blue_bold"
+                    android:layout_marginStart="@dimen/padding_medium"
+                    android:text="Grzegorz Nowak" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/multiple_photos_time"
+                style="@style/text_normal_grey_light"
+                android:text="23 godziny temu" />
+        </LinearLayout>
+    </LinearLayout>
+
+    
+
+    <TextView
+        android:id="@+id/multiple_photos_description"
+        style="@style/text_normal"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:text="Takie fotki ustrzeliliśmy ze szwagrem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_avatar" />
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/padding_medium">
+
+        <ImageView
+            android:id="@+id/multiple_photos_image_left"
+            style="@style/default_image_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/landspace4"
+            android:layout_weight="1"/>
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/padding_small_half"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/multiple_photos_image_right1"
+                style="@style/default_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/landspace1"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/multiple_photos_image_right2"
+                style="@style/default_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/padding_small_half"
+                android:scaleType="centerCrop"
+                android:src="@drawable/landspace2"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/multiple_photos_image_right3"
+                style="@style/default_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/padding_small_half"
+                android:scaleType="centerCrop"
+                android:src="@drawable/landspace3"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/multiple_photos_like_count"
+        style="@style/text_normal_grey_light"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:text="Stefan Kowalski i 14 inn..."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_image_left" />
+
+    <View
+        android:id="@+id/multiple_photos_bottom_divider_horizontal"
+        style="@style/divider_horizontal"
+        android:layout_marginTop="@dimen/padding_default"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_like_count" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/multiple_photos_like_icon"
+                style="@style/default_image_view"
+                android:src="@drawable/like" />
+
+            <TextView
+                android:id="@+id/multiple_photos_like_count_bottom"
+                style="@style/text_normal"
+                android:layout_marginStart="@dimen/padding_small"
+                android:text="15" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/multiple_photos_bottom_divider_vertical_left"
+            style="@style/divider_vertical"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/multiple_photos_comments_icon"
+                style="@style/default_image_view"
+                android:src="@drawable/comments" />
+
+            <TextView
+                android:id="@+id/multiple_photos_comments_count"
+                style="@style/text_normal"
+                android:layout_marginStart="@dimen/padding_small"
+                android:text="15" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/multiple_photos_bottom_divider_vertical_right"
+            style="@style/divider_vertical"
+            android:layout_height="40dp" />
+
+        <ImageView
+            android:id="@+id/multiple_photos_share_icon"
+            style="@style/default_image_view"
+            android:layout_weight="1"
+            android:src="@drawable/share" />
+    </LinearLayout>
+</LinearLayout>

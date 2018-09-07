@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/event_avatar"
+        style="@style/avatar_image_view"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:src="@drawable/avatar3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/event_name"
+        style="@style/text_normal_blue_bold"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:text="Kamil Wiśniewski"
+        app:layout_constraintBottom_toTopOf="@id/event_time"
+        app:layout_constraintLeft_toRightOf="@id/event_avatar"
+        app:layout_constraintTop_toTopOf="@id/event_avatar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/event_time"
+        style="@style/text_normal_grey_light"
+        android:text="12 godzin temu"
+        app:layout_constraintBottom_toBottomOf="@id/event_avatar"
+        app:layout_constraintStart_toStartOf="@id/event_name"
+        app:layout_constraintTop_toBottomOf="@id/event_name" />
+
+    <TextView
+        android:id="@+id/event_description"
+        style="@style/text_normal"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:text="Zapraszam wszystkich serdecznie na mój ostatni w tym roku koncert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/event_avatar" />
+
+    <ImageView
+        android:id="@+id/event_image"
+        style="@style/default_image_view"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:scaleType="centerCrop"
+        android:src="@drawable/event"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/event_description" />
+
+    <TextView
+        android:id="@+id/event_month"
+        style="@style/text_normal_red_dark"
+        android:text="WRZ"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@id/event_event_name"
+        app:layout_constraintBottom_toTopOf="@id/event_day"
+        android:layout_marginStart="@dimen/padding_default"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/event_day"
+        style="@style/text_normal_bold"
+        android:text="15"
+        app:layout_constraintStart_toStartOf="@id/event_month"
+        app:layout_constraintEnd_toEndOf="@id/event_month"
+        app:layout_constraintTop_toBottomOf="@id/event_month"
+        app:layout_constraintBottom_toBottomOf="@id/event_event_place"/>
+
+    <TextView
+        android:id="@+id/event_event_name"
+        style="@style/text_normal_bold"
+        android:layout_marginStart="@dimen/padding_default"
+        app:layout_constraintStart_toEndOf="@id/event_month"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:text="Koncert - Kamil Wiśniewski Band"
+        app:layout_constraintTop_toBottomOf="@id/event_image"/>
+
+    <TextView
+        android:id="@+id/event_event_date"
+        style="@style/text_normal"
+        app:layout_constraintStart_toStartOf="@id/event_event_name"
+        app:layout_constraintTop_toBottomOf="@id/event_event_name"
+        android:text="15 września - 16 września"/>
+
+    <TextView
+        android:id="@+id/event_event_place"
+        style="@style/text_normal"
+        app:layout_constraintStart_toStartOf="@id/event_event_name"
+        app:layout_constraintTop_toBottomOf="@id/event_event_date"
+        android:text="Tauron Arena Kraków"/>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/event_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="event_day,event_event_place"/>
+
+    <TextView
+        android:id="@+id/event_like_count"
+        style="@style/text_normal_grey_light"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:text="Stefan Kowalski i 14 inn..."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/event_barrier" />
+
+    <View
+        android:id="@+id/event_bottom_divider_horizontal"
+        style="@style/divider_horizontal"
+        android:layout_marginTop="@dimen/padding_default"
+        app:layout_constraintTop_toBottomOf="@id/event_like_count" />
+
+    <ImageView
+        android:id="@+id/event_like_icon"
+        style="@style/default_image_view"
+        android:src="@drawable/like"
+        app:layout_constraintBottom_toBottomOf="@id/event_bottom_divider_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/event_like_count_bottom"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/event_bottom_divider_vertical_left" />
+
+    <TextView
+        android:id="@+id/event_like_count_bottom"
+        style="@style/text_normal"
+        android:layout_marginStart="@dimen/padding_small"
+        android:text="15"
+        app:layout_constraintBottom_toBottomOf="@id/event_bottom_divider_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/event_bottom_divider_vertical_left"
+        app:layout_constraintStart_toEndOf="@id/event_like_icon"
+        app:layout_constraintTop_toTopOf="@id/event_bottom_divider_vertical_left" />
+
+    <View
+        android:id="@+id/event_bottom_divider_vertical_left"
+        style="@style/divider_vertical"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toStartOf="@id/event_bottom_divider_vertical_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/event_bottom_divider_horizontal" />
+
+    <ImageView
+        android:id="@+id/event_comments_icon"
+        style="@style/default_image_view"
+        android:src="@drawable/comments"
+        app:layout_constraintBottom_toBottomOf="@id/event_bottom_divider_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/event_comments_count"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/event_bottom_divider_vertical_left"
+        app:layout_constraintTop_toTopOf="@id/event_bottom_divider_vertical_left" />
+
+    <TextView
+        android:id="@+id/event_comments_count"
+        style="@style/text_normal"
+        android:layout_marginStart="@dimen/padding_small"
+        android:text="15"
+        app:layout_constraintBottom_toBottomOf="@id/event_bottom_divider_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/event_bottom_divider_vertical_right"
+        app:layout_constraintStart_toEndOf="@id/event_comments_icon"
+        app:layout_constraintTop_toTopOf="@id/event_bottom_divider_vertical_left" />
+
+    <View
+        android:id="@+id/event_bottom_divider_vertical_right"
+        style="@style/divider_vertical"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/event_bottom_divider_vertical_left"
+        app:layout_constraintTop_toTopOf="@id/event_bottom_divider_vertical_left" />
+
+    <ImageView
+        android:id="@+id/event_share_icon"
+        style="@style/default_image_view"
+        android:src="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@id/event_bottom_divider_vertical_left"
+        app:layout_constraintTop_toTopOf="@id/event_bottom_divider_vertical_left"
+        app:layout_constraintStart_toEndOf="@id/event_bottom_divider_vertical_right"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</android.support.constraint.ConstraintLayout>

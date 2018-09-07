@@ -1,0 +1,85 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!-- Image View -->
+    <style name="default_image_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="avatar_image_view" parent="default_image_view">
+        <item name="android:layout_width">54dp</item>
+        <item name="android:layout_height">54dp</item>
+    </style>
+
+    <!-- Text Views -->
+    <style name="text_view_default">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="text_tiny" parent="text_view_default">
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+    </style>
+
+    <style name="text_small" parent="text_view_default">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="text_normal" parent="text_view_default">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="text_normal_bold" parent="text_view_default">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_big" parent="text_view_default">
+        <item name="android:textSize">@dimen/text_size_big</item>
+    </style>
+
+    <style name="text_normal_blue" parent="text_normal">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="text_normal_red_dark" parent="text_normal">
+        <item name="android:textColor">@color/red_dark</item>
+    </style>
+
+
+    <style name="text_normal_blue_bold" parent="text_normal_blue">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_normal_grey_light" parent="text_normal">
+        <item name="android:textColor">@color/grey_light</item>
+    </style>
+
+
+    <!-- Dividers -->
+    <style name="divider_default">
+        <item name="android:background">@color/default_divider</item>
+    </style>
+
+    <style name="divider_horizontal" parent="divider_default">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider_size</item>
+    </style>
+
+    <style name="divider_vertical" parent="divider_default">
+        <item name="android:layout_width">@dimen/divider_size</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+</resources>

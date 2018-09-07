@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/multiple_photos_avatar"
+        style="@style/avatar_image_view"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:src="@drawable/avatar1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/multiple_photos_name"
+        style="@style/text_normal_blue_bold"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:text="Jan Kowalski"
+        app:layout_constraintBottom_toTopOf="@id/multiple_photos_time"
+        app:layout_constraintLeft_toRightOf="@id/multiple_photos_avatar"
+        app:layout_constraintTop_toTopOf="@id/multiple_photos_avatar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/multiple_photos_with"
+        style="@style/text_normal"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:text="z:"
+        app:layout_constraintLeft_toRightOf="@id/multiple_photos_name"
+        app:layout_constraintTop_toTopOf="@id/multiple_photos_name" />
+
+    <TextView
+        android:id="@+id/multiple_photos_friend_name"
+        style="@style/text_normal_blue_bold"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:text="Grzegorz Nowak"
+        app:layout_constraintLeft_toRightOf="@id/multiple_photos_with"
+        app:layout_constraintTop_toTopOf="@id/multiple_photos_name" />
+
+    <TextView
+        android:id="@+id/multiple_photos_time"
+        style="@style/text_normal_grey_light"
+        android:text="23 godziny temu"
+        app:layout_constraintBottom_toBottomOf="@id/multiple_photos_avatar"
+        app:layout_constraintStart_toStartOf="@id/multiple_photos_name"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_name" />
+
+    <TextView
+        android:id="@+id/multiple_photos_description"
+        style="@style/text_normal"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:text="Takie fotki ustrzeliliśmy ze szwagrem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_avatar" />
+
+    <ImageView
+        android:id="@+id/multiple_photos_image_left"
+        style="@style/default_image_view"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:scaleType="centerCrop"
+        android:src="@drawable/landspace4"
+        app:layout_constraintEnd_toStartOf="@id/multiple_photos_image_right1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_description" />
+
+    <ImageView
+        android:id="@+id/multiple_photos_image_right1"
+        style="@style/default_image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/padding_small_half"
+        android:scaleType="centerCrop"
+        android:src="@drawable/landspace1"
+        app:layout_constraintBottom_toTopOf="@id/multiple_photos_image_right2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/multiple_photos_image_left"
+        app:layout_constraintTop_toTopOf="@id/multiple_photos_image_left"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/multiple_photos_image_right2"
+        style="@style/default_image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/padding_small_half"
+        android:scaleType="centerCrop"
+        android:src="@drawable/landspace2"
+        app:layout_constraintBottom_toTopOf="@id/multiple_photos_image_right3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/multiple_photos_image_right1"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_image_right1" />
+
+    <ImageView
+        android:id="@+id/multiple_photos_image_right3"
+        style="@style/default_image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/padding_small_half"
+        android:scaleType="centerCrop"
+        android:src="@drawable/landspace3"
+        app:layout_constraintBottom_toBottomOf="@id/multiple_photos_image_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/multiple_photos_image_right1"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_image_right2" />
+
+    <TextView
+        android:id="@+id/multiple_photos_like_count"
+        style="@style/text_normal_grey_light"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:text="Stefan Kowalski i 14 inn..."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_image_left" />
+
+    <View
+        android:id="@+id/multiple_photos_bottom_divider_horizontal"
+        style="@style/divider_horizontal"
+        android:layout_marginTop="@dimen/padding_default"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_like_count" />
+
+    <ImageView
+        android:id="@+id/multiple_photos_like_icon"
+        style="@style/default_image_view"
+        android:src="@drawable/like"
+        app:layout_constraintBottom_toBottomOf="@id/multiple_photos_bottom_divider_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/multiple_photos_like_count_bottom"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/multiple_photos_bottom_divider_vertical_left" />
+
+    <TextView
+        android:id="@+id/multiple_photos_like_count_bottom"
+        style="@style/text_normal"
+        android:layout_marginStart="@dimen/padding_small"
+        android:text="15"
+        app:layout_constraintBottom_toBottomOf="@id/multiple_photos_bottom_divider_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/multiple_photos_bottom_divider_vertical_left"
+        app:layout_constraintStart_toEndOf="@id/multiple_photos_like_icon"
+        app:layout_constraintTop_toTopOf="@id/multiple_photos_bottom_divider_vertical_left" />
+
+    <View
+        android:id="@+id/multiple_photos_bottom_divider_vertical_left"
+        style="@style/divider_vertical"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toStartOf="@id/multiple_photos_bottom_divider_vertical_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiple_photos_bottom_divider_horizontal" />
+
+    <ImageView
+        android:id="@+id/multiple_photos_comments_icon"
+        style="@style/default_image_view"
+        android:src="@drawable/comments"
+        app:layout_constraintBottom_toBottomOf="@id/multiple_photos_bottom_divider_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/multiple_photos_comments_count"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/multiple_photos_bottom_divider_vertical_left"
+        app:layout_constraintTop_toTopOf="@id/multiple_photos_bottom_divider_vertical_left" />
+
+    <TextView
+        android:id="@+id/multiple_photos_comments_count"
+        style="@style/text_normal"
+        android:layout_marginStart="@dimen/padding_small"
+        android:text="15"
+        app:layout_constraintBottom_toBottomOf="@id/multiple_photos_bottom_divider_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/multiple_photos_bottom_divider_vertical_right"
+        app:layout_constraintStart_toEndOf="@id/multiple_photos_comments_icon"
+        app:layout_constraintTop_toTopOf="@id/multiple_photos_bottom_divider_vertical_left" />
+
+    <View
+        android:id="@+id/multiple_photos_bottom_divider_vertical_right"
+        style="@style/divider_vertical"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/multiple_photos_bottom_divider_vertical_left"
+        app:layout_constraintTop_toTopOf="@id/multiple_photos_bottom_divider_vertical_left" />
+
+    <ImageView
+        android:id="@+id/multiple_photos_share_icon"
+        style="@style/default_image_view"
+        android:src="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@id/multiple_photos_bottom_divider_vertical_left"
+        app:layout_constraintTop_toTopOf="@id/multiple_photos_bottom_divider_vertical_left"
+        app:layout_constraintStart_toEndOf="@id/multiple_photos_bottom_divider_vertical_right"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</android.support.constraint.ConstraintLayout>
