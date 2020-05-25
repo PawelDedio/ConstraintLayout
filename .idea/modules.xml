@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudioProjects-ConstraintLayout.iml" filepath="$PROJECT_DIR$/AndroidStudioProjects-ConstraintLayout.iml" group="ConstraintLayout" />
       <module fileurl="file://$PROJECT_DIR$/ConstraintLayout.iml" filepath="$PROJECT_DIR$/ConstraintLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/ConstraintLayout-app.iml" filepath="$PROJECT_DIR$/app/ConstraintLayout-app.iml" group="ConstraintLayout/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

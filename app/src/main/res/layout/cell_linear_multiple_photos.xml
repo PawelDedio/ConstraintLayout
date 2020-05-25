@@ -23,7 +23,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/padding_medium"
             android:orientation="vertical">
-            
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,47 +54,46 @@
         </LinearLayout>
     </LinearLayout>
 
-    
 
     <TextView
         android:id="@+id/multiple_photos_description"
         style="@style/text_normal"
         android:layout_marginStart="@dimen/padding_medium"
         android:layout_marginTop="@dimen/padding_medium"
-        android:text="Takie fotki ustrzeliliśmy ze szwagrem"
+        android:text="Fotki z dzisiejszego wyjazdu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/multiple_photos_avatar" />
-    
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/padding_medium">
+        android:layout_marginTop="@dimen/padding_medium"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/multiple_photos_image_left"
             style="@style/default_image_view"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:scaleType="centerCrop"
-            android:src="@drawable/landspace4"
-            android:layout_weight="1"/>
-        
+            android:src="@drawable/landspace4" />
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/padding_small_half"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/multiple_photos_image_right1"
                 style="@style/default_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_weight="1"
                 android:scaleType="centerCrop"
-                android:src="@drawable/landspace1"
-                android:layout_weight="1"/>
+                android:src="@drawable/landspace1" />
 
             <ImageView
                 android:id="@+id/multiple_photos_image_right2"
@@ -102,9 +101,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="@dimen/padding_small_half"
+                android:layout_weight="1"
                 android:scaleType="centerCrop"
-                android:src="@drawable/landspace2"
-                android:layout_weight="1" />
+                android:src="@drawable/landspace2" />
 
             <ImageView
                 android:id="@+id/multiple_photos_image_right3"
@@ -112,9 +111,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="@dimen/padding_small_half"
+                android:layout_weight="1"
                 android:scaleType="centerCrop"
-                android:src="@drawable/landspace3"
-                android:layout_weight="1" />
+                android:src="@drawable/landspace3" />
         </LinearLayout>
     </LinearLayout>
 

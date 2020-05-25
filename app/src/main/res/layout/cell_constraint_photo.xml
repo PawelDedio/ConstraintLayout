@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -7,11 +7,11 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/photo_avatar"
         style="@style/avatar_image_view"
-        android:layout_marginTop="@dimen/padding_medium"
         android:layout_marginStart="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_medium"
         android:src="@drawable/avatar2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/photo_name"
@@ -36,11 +36,11 @@
         style="@style/text_normal"
         android:layout_width="0dp"
         android:layout_marginStart="@dimen/padding_medium"
-        android:layout_marginEnd="@dimen/padding_medium"
         android:layout_marginTop="@dimen/padding_medium"
-        android:text="Takie zdjęcie udało mi się ustrzelić. Chłopaki z forum fotograficznego posrają się z zadrości"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="@dimen/padding_medium"
+        android:text="Takie zdjęcie udało mi się ustrzelić, chłopaki na forum fotograficznym będą zadrościć."
         app:layout_constraintEnd_toEndOf="@dimen/padding_medium"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/photo_avatar" />
 
     <ImageView
@@ -131,7 +131,7 @@
         style="@style/default_image_view"
         android:src="@drawable/share"
         app:layout_constraintBottom_toBottomOf="@id/photo_bottom_divider_vertical_left"
-        app:layout_constraintTop_toTopOf="@id/photo_bottom_divider_vertical_left"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/photo_bottom_divider_vertical_right"
-        app:layout_constraintEnd_toEndOf="parent"/>
-</android.support.constraint.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="@id/photo_bottom_divider_vertical_left" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,11 @@
 package com.dedio.constraintlayout
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-const val LINEAR_VIEWS = true
+const val LINEAR_VIEWS = false
 
 class WallAdapter : RecyclerView.Adapter<WallViewHolder>() {
 
@@ -28,6 +28,7 @@ class WallAdapter : RecyclerView.Adapter<WallViewHolder>() {
     override fun getItemCount() = items!!.size
 
     override fun onBindViewHolder(viewHolder: WallViewHolder, position: Int) {
+        viewHolder.setIsRecyclable(false)
     }
 
     private fun createMultiplePhotoItemView(parent: ViewGroup): View {

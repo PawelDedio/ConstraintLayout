@@ -39,10 +39,10 @@
     <TextView
         android:id="@+id/photo_description"
         style="@style/text_normal"
-        android:layout_marginEnd="@dimen/padding_medium"
         android:layout_marginStart="@dimen/padding_medium"
         android:layout_marginTop="@dimen/padding_medium"
-        android:text="Takie zdjęcie udało mi się ustrzelić. Chłopaki z forum fotograficznego posrają się z zadrości" />
+        android:layout_marginEnd="@dimen/padding_medium"
+        android:text="Takie zdjęcie udało mi się ustrzelić, chłopaki na forum fotograficznym będą zadrościć." />
 
     <ImageView
         android:id="@+id/photo_image"

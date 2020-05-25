@@ -1,6 +1,6 @@
 package com.dedio.constraintlayout
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 
 class WallViewHolder : RecyclerView.ViewHolder {
