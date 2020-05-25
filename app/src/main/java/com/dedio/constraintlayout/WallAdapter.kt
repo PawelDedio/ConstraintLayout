@@ -27,9 +27,7 @@ class WallAdapter : RecyclerView.Adapter<WallViewHolder>() {
 
     override fun getItemCount() = items!!.size
 
-    override fun onBindViewHolder(viewHolder: WallViewHolder, position: Int) {
-        viewHolder.setIsRecyclable(false)
-    }
+    override fun onBindViewHolder(viewHolder: WallViewHolder, position: Int) = Unit
 
     private fun createMultiplePhotoItemView(parent: ViewGroup): View {
         val resId = if(LINEAR_VIEWS) {
