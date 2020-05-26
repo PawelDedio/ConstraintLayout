@@ -3,39 +3,29 @@ package com.dedio.constraintlayout
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import androidx.core.widget.NestedScrollView
 
+const val LINEAR_VIEWS = true
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val timeStart = System.currentTimeMillis()
-        setContentView(R.layout.activity_main)
+        setContentView(generateLayoutId())
 
-        val items = createWallItems(30)
-
-        val adapter = WallAdapter()
-        adapter.items = items
-
-        main_recycler.adapter = adapter
-        adapter.notifyDataSetChanged()
-        main_recycler.post {
+        findViewById<NestedScrollView>(R.id.mainScroll).post {
             val timeEnd = System.currentTimeMillis() - timeStart
-            Log.e("MainActivity", "measured time inside recycler is: $timeEnd ms")
+            Log.e("MainActivity", "measured time after post is: $timeEnd ms")
         }
+
         val timeEnd = System.currentTimeMillis() - timeStart
         Log.e("MainActivity", "measured time is: $timeEnd ms")
+
     }
 
-    private fun createWallItems(requiredCount: Int): List<WallItem> {
-        val list = ArrayList<WallItem>()
-
-        for (i in 1..requiredCount) {
-            list.add(WallItem(1))
-            list.add(WallItem(2))
-            list.add(WallItem(3))
-        }
-
-        return list
+    private fun generateLayoutId() = if(LINEAR_VIEWS) {
+        R.layout.activity_main_static_linear
+    } else {
+        R.layout.activity_main_static_constraint
     }
 }
